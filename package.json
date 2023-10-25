@@ -1,9 +1,9 @@
 {
   "description": "Feel free to delete this and start from scratch.",
-  "main": "index2.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config index2.js",
+    "dev": "nodemon -r dotenv/config index.js",
     "rd": "nodemon -r dotenv/config db/scripts/reset-database.js"
   },
   "dependencies": {
