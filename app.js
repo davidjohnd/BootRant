@@ -4,7 +4,7 @@ import morgan from "morgan";
 
 //importing the requests
 import { getDate,
-    createPost } from "./entry";
+    createPost } from "./entry.js";
 
 
 
