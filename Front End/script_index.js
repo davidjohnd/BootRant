@@ -4,6 +4,7 @@ const bragButton = document.getElementById("bragButton");
 const rantButton = document.getElementById("rantButton");
 const seeJournal = document.getElementById("seeJournalButton");
 
+
 // create a function to change from index.html to other .htmls
 
 function changeToJournal() {
