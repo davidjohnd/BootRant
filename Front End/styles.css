@@ -219,6 +219,9 @@ footer {
 .card-date {
   flex-direction: row;
   display: flex;
+  justify-content: flex-end;
+  color: rgb(228, 229, 231);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .text-icon {
   display: flex;
@@ -226,6 +229,22 @@ footer {
   align-items: flex-start;
 }
 .card-icon {
-  height: 1.6rem;
+  height: 1.1rem;
   flex-shrink: 0;
+  margin-right: 10px;
+}
+.brag-card p {
+  margin: 0;
+  color: aliceblue;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rant-card p {
+  margin: 0;
+  color: aliceblue;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.cal-logo {
+  margin-right: 0.5rem;
 }
