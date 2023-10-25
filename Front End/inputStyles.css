@@ -1,0 +1,272 @@
+/* Styling for input pages */
+body {
+    background-image: url("./assets/homepageBackgroundImage.png");
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+  }
+
+/* Proud moment */
+.proudMoment {
+  margin-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1.5rem;
+  background-color: #423ea1;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: white;
+  text-align: center;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* Input box */
+.proudMoment {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.inputbox {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
+
+}
+
+form > textarea {
+  width: 100%;
+  background-color: #423ea1;
+  color: white;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  border-radius: 1.5rem;
+  padding-top: .5rem;
+
+}
+
+/* Copy from styles.css */
+/* Background image */
+  
+  /* Text CSS */
+  h1 {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+  }
+  
+  .slogan {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  #quote {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Logo image size */
+  #weblogo {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+  }
+  
+  /* Button CSS */
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1.5rem;
+    height: 3.875rem;
+    border: none;
+  }
+  
+  .buttonContent {
+    display: flex;
+    width: 12rem;
+    margin: auto;
+  }
+  
+  .buttonText {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color: white;
+    padding-left: 1rem;
+    font-size: 0.937rem;
+    font-weight: 700;
+  }
+  
+  /* Brag button */
+  #bragButton {
+    background-color: #423ea1;
+    border: none;
+  }
+  
+  /* Rant button */
+  #rantButton {
+    background-color: #ee4f64;
+    border: none;
+  }
+  
+  /* See Journal Button */
+  #seeJournalButton {
+    background-color: #423ea1;
+    border: none;
+  }
+  
+  /* Home page specific */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    align-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Header position logo and  name*/
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slogan-quote-spacer {
+    height: 5cqh;
+    display: block;
+    content: "";
+  }
+  /* Icon size  */
+  .button-icon {
+    width: 1.5rem;
+    height: 1.26956rem;
+    flex-shrink: 0;
+  }
+  /* ------------------------------------------------------Journal page----------------------------------------------------------------  */
+  .journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4.8125rem;
+    flex-shrink: 0;
+    background: #d4c4e1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: auto;
+  }
+  
+  .goback_icon {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #weblogo {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* brag and rant button footer */
+  footer {
+    height: 7.875rem;
+    background: #d4c4e1;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  /* Brag button */
+  .footerBragButton {
+    background: #423ea1;
+    width: 9.4rem;
+    height: 4.4rem;
+    align-items: center;
+  }
+  .footerBragHeart {
+    height: 1.4rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  
+  /* Rant button */
+  .footerRantButton {
+    background: #ee4f64;
+    width: 9.4rem;
+    height: 4.4rem;
+    margin-left: 3rem;
+    align-items: center;
+  }
+  
+  .footerRantSkull {
+    height: 1.6rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  
+  .footerButtonText {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+  }
+  /* Brag card styling */
+  /* Jounral card styling */
+  .journalEntries {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    top: 3;
+  }
+  .brag-card {
+    align-items: center;
+    justify-content: center;
+    background: #423ea1;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .rant-card {
+    align-items: center;
+    justify-content: center;
+    background: #ee4f64;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .card-date {
+    flex-direction: row;
+    display: flex;
+  }
+  .text-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .card-icon {
+    height: 1.6rem;
+    flex-shrink: 0;
+  }
+  
