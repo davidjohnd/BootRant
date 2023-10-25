@@ -17,14 +17,19 @@ h1 {
 .slogan {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   text-align: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-weight: 700;
+  color: #423ea1;
 }
 
 #quote {
   font-family: Inter, Arial, Helvetica, sans-serif;
   padding-left: 2rem;
   padding-right: 2rem;
+  text-align: center;
+  color: #423ea1;
+  font-weight: 400;
 }
 
 /* Logo image size */
@@ -86,12 +91,16 @@ button {
   padding-right: 2rem;
 }
 
-/* Header position logo and  name*/
-header {
+/* Header position logo and name*/
+header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* h1 {
+  margin: 0;
+} */
 
 .slogan-quote-spacer {
   height: 5cqh;
