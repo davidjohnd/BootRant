@@ -3,16 +3,15 @@ import pg from "pg";
 
 // Retrieve the database connection string from environment variables
 const connectionString = process.env.DB_CONNECTION_STRING;
-console.log(connectionString);
 // Check if the connection string is not defined, and if so, throw console.error
 if (!connectionString) {
-    throw new Error(
-        "No DB_CONNECTION_STRING defined. Did you load in your env variables?"
-    );
-} 
+  throw new Error(
+    "No DB_CONNECTION_STRING defined. Did you load in your env variables?"
+  );
+}
 
 // Export a new instance of pg.Pool, which will be used to interact with the PostgreSQL database
 export const pool = new pg.Pool({
-    // pass the connection string to the pool so it knows to connect to db 
-    connectionString,
+  // pass the connection string to the pool so it knows to connect to db
+  connectionString,
 });
