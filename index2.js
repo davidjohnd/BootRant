@@ -3,7 +3,7 @@ import pg from "pg";
 
 // Retrieve the database connection string from environment variables
 const connectionString = process.env.DB_CONNECTION_STRING;
-
+console.log(connectionString);
 // Check if the connection string is not defined, and if so, throw console.error
 if (!connectionString) {
     throw new Error(
