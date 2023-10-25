@@ -12,13 +12,16 @@ body {
 /* Text CSS */
 h1 {
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  text-shadow: 0.5px 0.5px 0px #423ea1, -0.5px -0.5px 0px #423ea1,
+    0.5px -0.5px 0px #423ea1, -0.5px 0.5px 0px #423ea1;
 }
 
 .slogan {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   text-align: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-weight: 700;
   color: #423ea1;
 }
@@ -30,10 +33,17 @@ h1 {
   text-align: center;
   color: #423ea1;
   font-weight: 400;
+  font-size: 0.9rem;
 }
 
 /* Logo image size */
 #weblogo {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+}
+
+#weblogo1 {
   width: 3.5rem;
   height: 3.5rem;
   flex-shrink: 0;
@@ -47,6 +57,7 @@ button {
   border-radius: 1.5rem;
   height: 3.875rem;
   border: none;
+  margin: 1.1rem 0;
 }
 
 .buttonContent {
@@ -67,18 +78,21 @@ button {
 #bragButton {
   background-color: #423ea1;
   border: none;
+  box-shadow: 0px 4px 6px rgb(66, 62, 161);
 }
 
 /* Rant button */
 #rantButton {
   background-color: #ee4f64;
   border: none;
+  box-shadow: 0px 4px 6px rgb(238, 79, 100);
 }
 
 /* See Journal Button */
 #seeJournalButton {
   background-color: #423ea1;
   border: none;
+  box-shadow: 0px 4px 6px rgb(66, 62, 161);
 }
 
 /* Home page specific */
@@ -92,20 +106,34 @@ button {
 }
 
 /* Header position logo and name*/
-header h1 {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  flex-direction: row;
+  position: relative;
+  bottom: 0;
+  color: #423ea1;
+  font-weight: 900;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
-/* h1 {
-  margin: 0;
-} */
+/* height: 7.875rem;
+  background: #d4c4e1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center; */
 
 .slogan-quote-spacer {
-  height: 5cqh;
-  display: block;
-  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 50px; /* Or whatever height you want, but setting it to 1px makes it effectively invisible */
 }
 /* Icon size  */
 .button-icon {
@@ -144,6 +172,10 @@ header h1 {
 #weblogo {
   display: block;
   margin: 0 auto;
+}
+#weblogo1 {
+  display: block;
+  margin: 0 1rem;
 }
 
 /* brag and rant button footer */
