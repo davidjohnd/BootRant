@@ -219,6 +219,13 @@ footer {
   width: 100%;
   justify-content: center;
 }
+
+/* The bottom footer is persistant which means it covers up the base of the screen, this div is at the bottom of the html pages to artifically make the pages longer so you can always scroll to see all the content */
+
+.footpad {
+  height: 9rem;
+}
+
 /* Brag button */
 .footerBragButton {
   background: #423ea1;
@@ -331,3 +338,4 @@ footer {
 .cal-logo {
   margin-right: 0.5rem;
 }
+
