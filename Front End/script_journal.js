@@ -1,9 +1,7 @@
-//import { getDate } from "../Back_End/scripts/entry.js";
-
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
-const bragButton = document.getElementById("bragButton");
-const rantButton = document.getElementById("rantButton");
+const bragButton = document.getElementsByClassName("footerBragButton")[0];
+const rantButton = document.getElementsByClassName("footerRantButton")[0];
 const journalEntry = document.getElementsByClassName("journalEntries")[0];
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
@@ -11,15 +9,15 @@ function changeToHomePage() {
   window.location.href = "./index.html";
 }
 function changeToAddBrag() {
-  window.location.href = "./brag.html";
+  window.location.href = "./brag-input.html";
 }
 function changeToAddRant() {
-  window.location.href = "./rant.html";
+  window.location.href = "./rant-input.html";
 }
 // Event listeners
 backButton.addEventListener("click", changeToHomePage);
-//bragButton.addEventListener("click", changeToAddBrag);
-//rantButton.addEventListener("click", changeToAddRant);
+bragButton.addEventListener("click", changeToAddBrag);
+rantButton.addEventListener("click", changeToAddRant);
 
 //call journal with api
 //insert enteries
@@ -65,7 +63,7 @@ async function popDom() {
     } else {
       // if Brag create a brag card
       console.log(`Entry num: ${i} is type brag`);
-      //createBragCard(payload[i].post, payload[i].date)
+      createBragCard(payload[i].post, payload[i].date);
     }
   }
 }
@@ -81,7 +79,7 @@ function createRantCard(postString, postDate) {
   card.classList.add("rant-card");
   //Make the text icon div with class of text-icon
   const textIcon = document.createElement("div");
-  textIcon.classList.add("card-icon");
+  textIcon.classList.add("text-icon");
   //Make an image of skull class of card-icon
   const cardIcon = document.createElement("img");
   cardIcon.classList.add("card-icon");
@@ -89,6 +87,7 @@ function createRantCard(postString, postDate) {
   //Make the p element class of post
   const post = document.createElement("p");
   post.classList.add("post");
+  post.innerHTML = postString;
   //Make a  div with class card-date
   const cardDate = document.createElement("div");
   cardDate.classList.add("card-date");
@@ -99,6 +98,8 @@ function createRantCard(postString, postDate) {
   // p element with e class of date.
   const date = document.createElement("p");
   date.classList.add("date");
+  const shortDate = postDate.substring(0, 10);
+  date.innerHTML = shortDate;
   // append card-date into card (contains the calendar icon and the date)
   // card date needs the following children
   // append calendar icon
@@ -106,17 +107,67 @@ function createRantCard(postString, postDate) {
   // append p element
   cardDate.appendChild(date);
   // text icon needs the following children
-  //append p element
-  textIcon.appendChild(post);
   //append the card icon image
   textIcon.appendChild(cardIcon);
+  //append p element
+  textIcon.appendChild(post);
   // rant card needs the following children
-  // append card date
-  card.appendChild(cardDate);
   // text icon
   card.appendChild(textIcon);
+  // append card date
+  card.appendChild(cardDate);
   // append card child into journal Entries
   journalEntry.appendChild(card);
 }
 
 // Brag card function
+
+function createBragCard(postString, postDate) {
+  console.log(`post string is ${postString}`);
+  console.log(`post date is ${postDate}`);
+  // append text-icon into card (contains skull icon and the date)
+  // Make card
+  const card = document.createElement("div");
+  // Give the card the class of bragg.card
+  card.classList.add("brag-card");
+  //Make the text icon div with class of text-icon
+  const textIcon = document.createElement("div");
+  textIcon.classList.add("text-icon");
+  //Make an image of skull class of card-icon
+  const cardIcon = document.createElement("img");
+  cardIcon.classList.add("card-icon");
+  cardIcon.src = "./assets/heart.svg";
+  //Make the p element class of post
+  const post = document.createElement("p");
+  post.classList.add("post");
+  post.innerHTML = postString;
+  //Make a  div with class card-date
+  const cardDate = document.createElement("div");
+  cardDate.classList.add("card-date");
+  //Make an image of calander with class of cal-logo
+  const dateImage = document.createElement("img");
+  dateImage.src = "./assets/calendar.svg";
+  dateImage.classList.add("cal-logo");
+  // p element with e class of date.
+  const date = document.createElement("p");
+  date.classList.add("date");
+  const shortDate = postDate.substring(0, 10);
+  date.innerHTML = shortDate;
+  // append card-date into card (contains the calendar icon and the date)
+  // card date needs the following children
+  // append calendar icon
+  cardDate.appendChild(dateImage);
+  // append p element
+  cardDate.appendChild(date);
+  // text icon needs the following children
+  //append the card icon image
+  textIcon.appendChild(cardIcon);
+  //append p element
+  textIcon.appendChild(post);
+  // text icon
+  card.appendChild(textIcon);
+  // append card date
+  card.appendChild(cardDate);
+  // append card child into journal Entries
+  journalEntry.appendChild(card);
+}

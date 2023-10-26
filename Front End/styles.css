@@ -265,7 +265,7 @@ footer {
   padding-right: 2rem;
   display: flex;
   flex-direction: column;
-  top: 3;
+  /* top: 3; */
 }
 .brag-card {
   align-items: center;
