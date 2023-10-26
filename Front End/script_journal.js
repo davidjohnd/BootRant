@@ -1,3 +1,5 @@
+import { getDate } from "../Back_End/scripts/entry.js";
+
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
 const bragButton = document.getElementById("bragButton");
@@ -43,9 +45,9 @@ async function retrieveJournal() {
 //On load part
 window.onload = populateDom;
 //GET request
-function populateDom() {
+async function populateDom() {
   console.log("Page load starting request");
-
+  const payload = await getDate();
   // Parse the JSON
 
   // Loop thru payload
