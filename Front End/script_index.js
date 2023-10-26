@@ -8,7 +8,7 @@ const seeJournal = document.getElementById("seeJournalButton");
 
 function changeToJournal() {
   // Use window.location to navigate to the desired page
-  window.location.href = "./journal-input.html";
+  window.location.href = "./journal.html";
 }
 function changeToAddBrag() {
   // Use window.location to navigate to the desired page
