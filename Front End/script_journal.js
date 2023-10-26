@@ -4,7 +4,7 @@
 const backButton = document.getElementsByClassName("back-button")[0];
 const bragButton = document.getElementById("bragButton");
 const rantButton = document.getElementById("rantButton");
-
+const journalEntry = document.getElementsByClassName("journalEntries")[0];
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
   // Use window.location to navigate to the desired page
@@ -43,41 +43,71 @@ async function retrieveJournal() {
 //On load part
 window.onload = popDom;
 
-
 async function popDom() {
+  // GET request and stores the values
+  const payloadObject = await retrieveJournal();
+  console.log("PayloadObject recieved");
+  console.log(`PayloadObject is type of ${typeof payloadObject}`);
+  console.log(payloadObject);
+  const payload = payloadObject.data;
+  console.log("Payload recieved");
+  console.log(`Payload is an Array ${Array.isArray(payload)}`);
+  console.log(payload);
+  console.log(`Payload has ${payload.length} entries`);
 
-// GET request and stores the values
-const payloadObject = await retrieveJournal();
-console.log('PayloadObject recieved')
-console.log(`PayloadObject is type of ${typeof(payloadObject)}`)
-console.log(payloadObject)
-const payload = payloadObject.data
-console.log('Payload recieved')
-console.log(`Payload is an Array ${Array.isArray(payload)}`)
-console.log(payload)
-console.log(`Payload has ${payload.length} entries`)
-
-// loop thru payload
-for (let i = 0; i < payload.length; i++) {
-  // check if the enty is brag or rant
-  // if Rant create a Rant card
-  if (payload[i].entry_type == 'rant') {
-    console.log(`Entry num: ${i} is type rant `)
-    createRantCard(payload[i].post, payload[i].date)
-  } else { // if Brag create a brag card
-    console.log(`Entry num: ${i} is type brag`)
-    //createBragCard(payload[i].post, payload[i].date)
-  }
+  // loop thru payload
+  for (let i = 0; i < payload.length; i++) {
+    // check if the enty is brag or rant
+    // if Rant create a Rant card
+    if (payload[i].entry_type == "rant") {
+      console.log(`Entry num: ${i} is type rant `);
+      createRantCard(payload[i].post, payload[i].date);
+    } else {
+      // if Brag create a brag card
+      console.log(`Entry num: ${i} is type brag`);
+      //createBragCard(payload[i].post, payload[i].date)
+    }
   }
 }
 
 // Rant card function
 function createRantCard(postString, date) {
+  // append text-icon into card (contains skull icon and the date)
+  // Make card
+  const card = document.createElement("div");
+  // Give the card the class of bragg.card
+  card.classList.add("brag-card");
+  //Make the text icon div with class of text-icon
+  const textIcon = document.createElement("img");
+  textIcon.classList.add("card-icon");
+  //Make an image of skull class of card-icon
+  textIcon.src = "./assets/skull.svg";
+  //Make the p element class of post
+  const post = document.createElement("p");
+  post.classList.add("post");
+  //Make a  div with class card-date
+  const cardDate = document.createElement("div");
+  cardDate.classList.add("card-date");
+  //Make an image of calander with class of cal-logo
+  const dateImage = document.createElement("img");
+  dateImage.src = "./assets/calendar.svg";
+  dateImage.classList.add("cal-logo");
+  // p element with e class of date.
+  const date = document.createElement("p");
+  date.classList.add("date");
+  // append card-date into card (contains the calendar icon and the date)
+
+  // card date needs the following children
+  // append p element
+  // append calendar icon
+  // text icon needs the following children
+  //append p element
+  //append the card icon image
+  // rant card needs the following children
+  // append card date
+  // text icon
+
   // append card child into journal Entries
-
-    // append text-icon into card (contains skull icon and the date)
-
-    // append card-date into card (contains the calendar icon and the date)
 }
 
 // Brag card function
