@@ -2,7 +2,7 @@
 
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
-const bragButton = document.getElementById("bragButton");
+const bragButton = document.querySelector(".footerBragButton");
 const rantButton = document.getElementById("rantButton");
 
 // create a function to change from index.html to other .htmls
@@ -11,15 +11,15 @@ function changeToHomePage() {
   window.location.href = "./index.html";
 }
 function changeToAddBrag() {
-  window.location.href = "./brag.html";
+  window.location.href = "./brag-input.html";
 }
 function changeToAddRant() {
-  window.location.href = "./rant.html";
+  window.location.href = "./rant-input.html";
 }
 // Event listeners
 backButton.addEventListener("click", changeToHomePage);
-//bragButton.addEventListener("click", changeToAddBrag);
-//rantButton.addEventListener("click", changeToAddRant);
+bragButton.addEventListener("click", changeToAddBrag);
+rantButton.addEventListener("click", changeToAddRant);
 
 //call journal with api
 //insert enteries
