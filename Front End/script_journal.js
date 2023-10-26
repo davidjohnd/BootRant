@@ -61,31 +61,23 @@ console.log(`Payload has ${payload.length} entries`)
 for (let i = 0; i < payload.length; i++) {
   // check if the enty is brag or rant
   // if Rant create a Rant card
-  if (payload[journalEntryNum].entry_type == 'rant') {
-    console.log(`Entry num: ${journalEntryNum} is type rant `)
-    //createRantCard(payload[journalEntryNum].post, payload[journalEntryNum].date)
+  if (payload[i].entry_type == 'rant') {
+    console.log(`Entry num: ${i} is type rant `)
+    createRantCard(payload[i].post, payload[i].date)
   } else { // if Brag create a brag card
-    console.log(`Entry num: ${journalEntryNum} is type brag`)
-    //createBragCard(payload[journalEntryNum].post, payload[journalEntryNum].date)
+    console.log(`Entry num: ${i} is type brag`)
+    //createBragCard(payload[i].post, payload[i].date)
   }
   }
 }
 
-//GET request
-// async function populateDom() {
-//   console.log("Page load starting request");
-//   const payload = await getDate();
-// Parse the JSON
-
-// Loop thru payload
-// Check if entry is Brag or Rant
-
-// If brag make brag card in DOM - Function
-
-// If rant make rant card in DOM - Function
-
-// exit
-//}
-// Brag card function
-
 // Rant card function
+function createRantCard(postString, date) {
+  // append card child into journal Entries
+
+    // append text-icon into card (contains skull icon and the date)
+
+    // append card-date into card (contains the calendar icon and the date)
+}
+
+// Brag card function
