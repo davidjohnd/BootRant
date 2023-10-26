@@ -38,3 +38,26 @@ Accept: "application/json",
     const data = await response.json();
 return data;
     }
+
+
+// On Load populate page with all existing database entries
+    //On load part
+
+    //GET request
+
+    // Parse the JSON
+
+    // Loop thru payload
+      // Check if entry is Brag or Rant
+
+        // If brag make brag card in DOM - Function
+
+        // If rant make rant card in DOM - Function
+
+    // exit
+
+
+// Brag card function
+
+
+// Rant card function
