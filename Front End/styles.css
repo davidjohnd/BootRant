@@ -12,6 +12,9 @@ body {
 /* Text CSS */
 h1 {
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  text-shadow: 0.5px 0.5px 0px #423ea1, -0.5px -0.5px 0px #423ea1,
+    0.5px -0.5px 0px #423ea1, -0.5px 0.5px 0px #423ea1;
 }
 
 .slogan {
@@ -19,16 +22,28 @@ h1 {
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-weight: 700;
+  color: #423ea1;
 }
 
 #quote {
   font-family: Inter, Arial, Helvetica, sans-serif;
   padding-left: 2rem;
   padding-right: 2rem;
+  text-align: center;
+  color: #423ea1;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 /* Logo image size */
 #weblogo {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+}
+
+#weblogo1 {
   width: 3.5rem;
   height: 3.5rem;
   flex-shrink: 0;
@@ -42,6 +57,7 @@ button {
   border-radius: 1.5rem;
   height: 3.875rem;
   border: none;
+  margin: 1.1rem 0;
 }
 
 .buttonContent {
@@ -62,18 +78,21 @@ button {
 #bragButton {
   background-color: #423ea1;
   border: none;
+  box-shadow: 0px 4px 6px rgb(66, 62, 161);
 }
 
 /* Rant button */
 #rantButton {
   background-color: #ee4f64;
   border: none;
+  box-shadow: 0px 4px 6px rgb(238, 79, 100);
 }
 
 /* See Journal Button */
 #seeJournalButton {
   background-color: #423ea1;
   border: none;
+  box-shadow: 0px 4px 6px rgb(66, 62, 161);
 }
 
 /* Home page specific */
@@ -86,17 +105,35 @@ button {
   padding-right: 2rem;
 }
 
-/* Header position logo and  name*/
+/* Header position logo and name*/
 header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  flex-direction: row;
+  position: relative;
+  bottom: 0;
+  color: #423ea1;
+  font-weight: 900;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
+/* height: 7.875rem;
+  background: #d4c4e1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center; */
+
 .slogan-quote-spacer {
-  height: 5cqh;
-  display: block;
-  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 50px; /* Or whatever height you want, but setting it to 1px makes it effectively invisible */
 }
 /* Icon size  */
 .button-icon {
@@ -135,6 +172,10 @@ header {
 #weblogo {
   display: block;
   margin: 0 auto;
+}
+#weblogo1 {
+  display: block;
+  margin: 0 1rem;
 }
 
 /* brag and rant button footer */
@@ -219,6 +260,9 @@ footer {
 .card-date {
   flex-direction: row;
   display: flex;
+  justify-content: flex-end;
+  color: rgb(228, 229, 231);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .text-icon {
   display: flex;
@@ -226,6 +270,22 @@ footer {
   align-items: flex-start;
 }
 .card-icon {
-  height: 1.6rem;
+  height: 1.1rem;
   flex-shrink: 0;
+  margin-right: 10px;
+}
+.brag-card p {
+  margin: 0;
+  color: aliceblue;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rant-card p {
+  margin: 0;
+  color: aliceblue;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.cal-logo {
+  margin-right: 0.5rem;
 }
