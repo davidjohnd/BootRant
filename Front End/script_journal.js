@@ -71,12 +71,14 @@ async function popDom() {
 }
 
 // Rant card function
-function createRantCard(postString, date) {
+function createRantCard(postString, postDate) {
+  console.log(`post string is ${postString}`);
+  console.log(`post date is ${postDate}`);
   // append text-icon into card (contains skull icon and the date)
   // Make card
   const card = document.createElement("div");
   // Give the card the class of bragg.card
-  card.classList.add("brag-card");
+  card.classList.add("rant-card");
   //Make the text icon div with class of text-icon
   const textIcon = document.createElement("div");
   textIcon.classList.add("card-icon");
