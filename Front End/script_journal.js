@@ -16,48 +16,47 @@ function changeToAddRant() {
 }
 // Event listeners
 backButton.addEventListener("click", changeToHomePage);
-bragButton.addEventListener("click", changeToAddBrag);
-rantButton.addEventListener("click", changeToAddRant);
+//bragButton.addEventListener("click", changeToAddBrag);
+//rantButton.addEventListener("click", changeToAddRant);
 
 //call journal with api
 //insert enteries
 async function retrieveJournal() {
-const response = await fetch("http://localhost:3000/", {
-headers: {
-Accept: "application/json",
-},
-});
+  const response = await fetch("http://localhost:3000/", {
+    headers: {
+      Accept: "application/json",
+    },
+  });
   // Check if the response failed, and if so log an error and halt the app
   if (!response.ok) {
     console.error(`Status: ${response.status}`);
     console.error(`Text: ${await response.text()}`);
     return;
-    }
+  }
 
-// return the parsed JSON from the response 
-    const data = await response.json();
-return data;
-    }
-
+  // return the parsed JSON from the response
+  const data = await response.json();
+  return data;
+}
 
 // On Load populate page with all existing database entries
-    //On load part
+//On load part
+window.onload = populateDom;
+//GET request
+function populateDom() {
+  console.log("Page load starting request");
 
-    //GET request
+  // Parse the JSON
 
-    // Parse the JSON
+  // Loop thru payload
+  // Check if entry is Brag or Rant
 
-    // Loop thru payload
-      // Check if entry is Brag or Rant
+  // If brag make brag card in DOM - Function
 
-        // If brag make brag card in DOM - Function
+  // If rant make rant card in DOM - Function
 
-        // If rant make rant card in DOM - Function
-
-    // exit
-
-
+  // exit
+}
 // Brag card function
-
 
 // Rant card function
