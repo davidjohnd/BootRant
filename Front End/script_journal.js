@@ -78,10 +78,12 @@ function createRantCard(postString, date) {
   // Give the card the class of bragg.card
   card.classList.add("brag-card");
   //Make the text icon div with class of text-icon
-  const textIcon = document.createElement("img");
+  const textIcon = document.createElement("div");
   textIcon.classList.add("card-icon");
   //Make an image of skull class of card-icon
-  textIcon.src = "./assets/skull.svg";
+  const cardIcon = document.createElement("img");
+  cardIcon.classList.add("card-icon");
+  cardIcon.src = "./assets/skull.svg";
   //Make the p element class of post
   const post = document.createElement("p");
   post.classList.add("post");
@@ -96,18 +98,23 @@ function createRantCard(postString, date) {
   const date = document.createElement("p");
   date.classList.add("date");
   // append card-date into card (contains the calendar icon and the date)
-
   // card date needs the following children
-  // append p element
   // append calendar icon
+  cardDate.appendChild(dateImage);
+  // append p element
+  cardDate.appendChild(date);
   // text icon needs the following children
   //append p element
+  textIcon.appendChild(post);
   //append the card icon image
+  textIcon.appendChild(cardIcon);
   // rant card needs the following children
   // append card date
+  card.appendChild(cardDate);
   // text icon
-
+  card.appendChild(textIcon);
   // append card child into journal Entries
+  journalEntry.appendChild(card);
 }
 
 // Brag card function
