@@ -35,6 +35,7 @@
       <img src="./assets/heart.svg" class="textinput-icon" alt="" />
       <form action="" class="bragForm">
         <textarea
+          id="Message"
           name="Message"
           rows="6"
           placeholder="Today I was ace at..."
@@ -44,7 +45,11 @@
     <footer class="rantAndBrag">
       <div id="footer-button-container">
         <!-- Save it button -->
-        <button class="footerSaveItButton" type="button">
+        <button
+          class="footerSaveItButton"
+          id="footerSaveItButton"
+          type="button"
+        >
           <img
             src="./assets/saveItIcon.svg"
             alt=""
@@ -59,6 +64,6 @@
         </button>
       </div>
     </footer>
-    <script type="module" src="script_brag.js"></script>
+    <script src="script_brag.js" type="module"></script>
   </body>
 </html>

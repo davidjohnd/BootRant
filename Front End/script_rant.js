@@ -17,7 +17,7 @@ backButton.addEventListener("click", changeToHomePage);
 // import create post
 
 const messageInput = document.getElementById("Message");
-const saveButton = document.getElementById("footerSaveItButton");
+const saveButton = document.getElementById("footerRantSaveItButton");
 
 saveButton.addEventListener("mousedown", async () => {
   console.log("clicked");
@@ -26,7 +26,7 @@ saveButton.addEventListener("mousedown", async () => {
   //const message = "test message"
 
   const postObject = {
-    entry_type: "brag",
+    entry_type: "rant",
     post: message,
   };
 

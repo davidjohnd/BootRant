@@ -37,6 +37,7 @@
       <form action="" class="bragForm">
         <textarea
           name="Message"
+          id="Message"
           rows="6"
           placeholder="Today I wrestled with..."
         ></textarea>
@@ -45,11 +46,15 @@
     <footer class="rantAndBrag">
       <div id="footer-button-container">
         <!-- Save it button -->
-        <button class="footerSaveItButton" type="button">
+        <button
+          class="footerSaveItButton"
+          id="footerRantSaveItButton"
+          type="button"
+        >
           <img
             src="./assets/saveItIcon.svg"
             alt=""
-            class="footerBragSaveIcon"
+            class="footerRantSaveIcon"
           />
           <h4 class="footerButtonText">Save it</h4>
         </button>
@@ -62,8 +67,8 @@
     </footer>
     <!-- Countdown animation -->
     <div class="countdown" id="countdown">
-      <div id="countdown-text">3</div>
+      <div id="countdown-text">4</div>
     </div>
-    <script src="main.js"></script>
+    <script src="script_rant.js" type="module"></script>
   </body>
 </html>
