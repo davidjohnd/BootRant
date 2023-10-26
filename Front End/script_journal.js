@@ -41,7 +41,36 @@ async function retrieveJournal() {
 
 // On Load populate page with all existing database entries
 //On load part
-window.onload = retrieveJournal;
+window.onload = popDom;
+
+
+async function popDom() {
+
+// GET request and stores the values
+const payloadObject = await retrieveJournal();
+console.log('PayloadObject recieved')
+console.log(`PayloadObject is type of ${typeof(payloadObject)}`)
+console.log(payloadObject)
+const payload = payloadObject.data
+console.log('Payload recieved')
+console.log(`Payload is an Array ${Array.isArray(payload)}`)
+console.log(payload)
+console.log(`Payload has ${payload.length} entries`)
+
+// loop thru payload
+for (let i = 0; i < payload.length; i++) {
+  // check if the enty is brag or rant
+  // if Rant create a Rant card
+  if (payload[journalEntryNum].entry_type == 'rant') {
+    console.log(`Entry num: ${journalEntryNum} is type rant `)
+    //createRantCard(payload[journalEntryNum].post, payload[journalEntryNum].date)
+  } else { // if Brag create a brag card
+    console.log(`Entry num: ${journalEntryNum} is type brag`)
+    //createBragCard(payload[journalEntryNum].post, payload[journalEntryNum].date)
+  }
+  }
+}
+
 //GET request
 // async function populateDom() {
 //   console.log("Page load starting request");
