@@ -218,6 +218,7 @@ header {
   height: 2.25rem;
   position: absolute;
   left: 2rem;
+  cursor: pointer;
 }
 
 .goback_icon {
