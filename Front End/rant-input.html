@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boot rant</title>
+    <!-- Google fonts links -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="inputStyles.css" />
+  </head>
+  <body>
+    <header class="journal-header">
+      <div class="headingContents">
+        <button type="button" class="back-button">
+          <img src="./assets/goback.svg" class="goback-icon" alt="" />
+        </button>
+        <img src="./assets/weblogo.png" id="weblogo" alt="Boot Rant Logo" />
+      </div>
+    </header>
+    <!-- Input form -->
+    <div class="rantMoment">
+      <h2 class="promptHeading">Today’s Rant moment
+      </h2>
+      <p class="quote">
+        “What made your day go from awesome to argh? Tell us the tale and vent away!"
+      </p>
+    </div>
+    <div class="rant-inputbox">
+      <img src="./assets/skull.svg" class="textinput-icon" alt="" />
+      <form action="" class="bragForm">
+        <textarea
+          name="Message"
+          rows="6"
+          placeholder="Today I wrestled with..."
+        ></textarea>
+      </form>
+    </div>
+    <footer class="rantAndBrag">
+      <div id="footer-button-container">
+        <!-- Save it button -->
+        <button class="footerSaveItButton" type="button">
+          <img
+            src="./assets/saveItIcon.svg"
+            alt=""
+            class="footerBragSaveIcon"
+          />
+          <h4 class="footerButtonText">Save it</h4>
+        </button>
+        <!-- Scream it button -->
+        <button class="footerScreamItButton" type="button">
+          <img src="./assets/skull.svg" alt="" class="footerRantSkull" />
+          <h4 class="footerButtonText">Scream it</h4>
+        </button>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
