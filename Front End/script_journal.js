@@ -11,10 +11,10 @@ function changeToHomePage() {
   window.location.href = "./index.html";
 }
 function changeToAddBrag() {
-  window.location.href = "./brag.html";
+  window.location.href = "./brag-input.html";
 }
 function changeToAddRant() {
-  window.location.href = "./rant.html";
+  window.location.href = "./rant-input.html";
 }
 // Event listeners
 backButton.addEventListener("click", changeToHomePage);
