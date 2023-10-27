@@ -19,7 +19,9 @@ backButton.addEventListener("click", changeToHomePage);
 const messageInput = document.getElementById("Message");
 const saveButton = document.getElementById("footerRantSaveItButton");
 
-saveButton.addEventListener("click", async () => {
+
+saveButton.addEventListener("mousedown", async () => {
+
   console.log("clicked");
   // Get message from input field
   const message = messageInput.value;
@@ -38,3 +40,4 @@ saveButton.addEventListener("click", async () => {
     body: JSON.stringify(postObject), // Convert your JSON object to a string and send it
   });
 });
+saveButton.addEventListener("mouseup", changeToHomePage);

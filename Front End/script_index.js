@@ -9,7 +9,7 @@ const seeJournal = document.getElementById("seeJournalButton");
 function changeToJournal() {
   // Use window.location to navigate to the desired page
   window.location.href = "./journal.html";
-};
+}
 function changeToAddBrag() {
   // Use window.location to navigate to the desired page
   window.location.href = "./brag-input.html";
@@ -19,6 +19,7 @@ function changeToAddRant() {
   window.location.href = "./rant-input.html";
 
 };
+
 
 // Event listeners
 bragButton.addEventListener("click", changeToAddBrag);

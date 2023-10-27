@@ -1,7 +1,5 @@
-
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
-
 
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
@@ -15,12 +13,11 @@ backButton.addEventListener("click", changeToHomePage);
 // make journal interactive to write things in the box to save it to database
 // declare vairable
 // import create post
-
-
 const messageInput = document.getElementById("Message");
 const saveButton = document.getElementById("footerSaveItButton");
 
-saveButton.addEventListener("click", async () => {
+saveButton.addEventListener("mousedown", async () => {
+
   console.log("clicked");
   // Get message from input field
   const message = messageInput.value;
@@ -40,3 +37,4 @@ saveButton.addEventListener("click", async () => {
   });
 });
 
+saveButton.addEventListener("mouseup", changeToHomePage);
