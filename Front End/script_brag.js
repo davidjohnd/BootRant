@@ -1,5 +1,3 @@
-// import { createBragPost } from '../Back_End/scripts/entry.js'
-
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
 
@@ -15,11 +13,11 @@ backButton.addEventListener("click", changeToHomePage);
 // make journal interactive to write things in the box to save it to database
 // declare vairable
 // import create post
-
 const messageInput = document.getElementById("Message");
 const saveButton = document.getElementById("footerSaveItButton");
 
 saveButton.addEventListener("mousedown", async () => {
+
   console.log("clicked");
   // Get message from input field
   const message = messageInput.value;
@@ -38,4 +36,5 @@ saveButton.addEventListener("mousedown", async () => {
     body: JSON.stringify(postObject), // Convert your JSON object to a string and send it
   });
 });
+
 saveButton.addEventListener("mouseup", changeToHomePage);

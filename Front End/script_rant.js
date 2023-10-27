@@ -19,7 +19,9 @@ backButton.addEventListener("click", changeToHomePage);
 const messageInput = document.getElementById("Message");
 const saveButton = document.getElementById("footerRantSaveItButton");
 
+
 saveButton.addEventListener("mousedown", async () => {
+
   console.log("clicked");
   // Get message from input field
   const message = messageInput.value;
