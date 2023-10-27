@@ -3,6 +3,7 @@ const backButton = document.getElementsByClassName("back-button")[0];
 
 const bragButton = document.querySelector(".footerBragButton");
 const rantButton = document.getElementById("rantButton");
+const journalEntry = document.getElementsByClassName("journalEntries")[0];
 
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
