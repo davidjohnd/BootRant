@@ -1,8 +1,9 @@
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
-const bragButton = document.getElementsByClassName("footerBragButton")[0];
-const rantButton = document.getElementsByClassName("footerRantButton")[0];
-const journalEntry = document.getElementsByClassName("journalEntries")[0];
+
+const bragButton = document.querySelector(".footerBragButton");
+const rantButton = document.getElementById("rantButton");
+
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
   // Use window.location to navigate to the desired page
