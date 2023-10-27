@@ -1,7 +1,7 @@
+// import { createBragPost } from '../Back_End/scripts/entry.js'
 
 //creating variable to select the buttons
 const backButton = document.getElementsByClassName("back-button")[0];
-
 
 // create a function to change from index.html to other .htmls
 function changeToHomePage() {
@@ -16,9 +16,8 @@ backButton.addEventListener("click", changeToHomePage);
 // declare vairable
 // import create post
 
-
 const messageInput = document.getElementById("Message");
-const saveButton = document.getElementById("footerSaveItButton");
+const saveButton = document.getElementById("footerRantSaveItButton");
 
 saveButton.addEventListener("click", async () => {
   console.log("clicked");
@@ -27,7 +26,7 @@ saveButton.addEventListener("click", async () => {
   //const message = "test message"
 
   const postObject = {
-    entry_type: "brag",
+    entry_type: "rant",
     post: message,
   };
 
@@ -39,4 +38,3 @@ saveButton.addEventListener("click", async () => {
     body: JSON.stringify(postObject), // Convert your JSON object to a string and send it
   });
 });
-
