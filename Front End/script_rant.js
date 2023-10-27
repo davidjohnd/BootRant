@@ -7,6 +7,10 @@ const backButton = document.getElementsByClassName("back-button")[0];
 function changeToHomePage() {
   // Use window.location to navigate to the desired page
   window.location.href = "./index.html";
+};
+function changeToJournal() {
+  // Use window.location to navigate to the desired page
+  window.location.href = "./journal.html";
 }
 
 // Event listeners
@@ -40,4 +44,4 @@ saveButton.addEventListener("mousedown", async () => {
     body: JSON.stringify(postObject), // Convert your JSON object to a string and send it
   });
 });
-saveButton.addEventListener("mouseup", changeToHomePage);
+saveButton.addEventListener("mouseup", changeToJournal);
