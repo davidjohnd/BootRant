@@ -6,7 +6,8 @@ import morgan from "morgan";
 import { getDate, createPost } from "./Back_End/scripts/entry.js";
 
 // Initialize the express app
-const app = express();
+export const app = express();
+// export default app;
 // Retrieve the port number from environment variables
 const PORT = process.env.PORT;
 
