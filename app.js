@@ -16,7 +16,7 @@ app.use(express.json()); // express.json() middleware is used to parse incoming 
 app.use(express.static("Front End"));
 app.get("/journal/", async function (req, res) {
   const entry = await getDate();
-  console.log("Did I get the date?")
+  console.log("Did I get the date?");
   res.status(200).json({ status: "success", data: entry });
 });
 
