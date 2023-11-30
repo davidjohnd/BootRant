@@ -6,7 +6,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0;
+  margin: 0 auto;
+  width: 414px;
 }
 
 /* Proud moment */
@@ -191,13 +192,13 @@ header {
 .journal-header {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 414px;
   height: 4.8125rem;
   flex-shrink: 0;
   background: #d4c4e1;
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 1000;
 }
 
@@ -239,8 +240,9 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   justify-content: center;
+  
 }
 
 #footer-button-container {
