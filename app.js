@@ -27,7 +27,7 @@ app.post("/journal/", async function (req, res) {
   res.status(201).json({ status: "success", data: entry });
 });
 
-// Start the server and listen on the specified port
-app.listen(PORT, function () {
-  console.log(`Server listening on port ${PORT}`);
-});
+// // Start the server and listen on the specified port
+// app.listen(PORT, function () {
+//   console.log(`Server listening on port ${PORT}`);
+// });

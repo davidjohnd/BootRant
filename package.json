@@ -1,6 +1,6 @@
 {
   "description": "Feel free to delete this and start from scratch.",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config app.js",
