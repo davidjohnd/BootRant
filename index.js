@@ -1,17 +1,33 @@
-// Import the pg (node-postgres) library
-import pg from "pg";
+// Import the required modules
+import express from "express";
+import morgan from "morgan";
 
-// Retrieve the database connection string from environment variables
-const connectionString = process.env.DB_CONNECTION_STRING;
-// Check if the connection string is not defined, and if so, throw console.error
-if (!connectionString) {
-  throw new Error(
-    "No DB_CONNECTION_STRING defined. Did you load in your env variables?"
-  );
-}
+//importing the requests
+import { getDate, createPost } from "./Back_End/scripts/entry.js";
 
-// Export a new instance of pg.Pool, which will be used to interact with the PostgreSQL database
-export const pool = new pg.Pool({
-  // pass the connection string to the pool so it knows to connect to db
-  connectionString,
+// Initialize the express app
+export const app = express();
+// export default app;
+// Retrieve the port number from environment variables
+const PORT = process.env.PORT;
+
+// Middleware
+app.use(morgan("dev")); // Morgan is used for logging HTTP requests to the console in a developer-friendly format
+app.use(express.json()); // express.json() middleware is used to parse incoming JSON requests
+app.use(express.static("Front End"));
+app.get("/journal/", async function (req, res) {
+  const entry = await getDate();
+  console.log("Did I get the date?");
+  res.status(200).json({ status: "success", data: entry });
+});
+
+app.post("/journal/", async function (req, res) {
+  const data = req.body;
+  const entry = await createPost(data);
+  res.status(201).json({ status: "success", data: entry });
+});
+
+// Start the server and listen on the specified port
+app.listen(PORT, function () {
+  console.log(`Server listening on port ${PORT}`);
 });
