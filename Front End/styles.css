@@ -144,16 +144,18 @@ header {
 }
 /* ------------------------------------------------------Journal page----------------------------------------------------------------  */
 .journal-header {
+  margin-left:auto;
+  margin-right:auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 414px;
   height: 4.8125rem;
   flex-shrink: 0;
   background: #d4c4e1;
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 1000;
 }
 .headingContents {
@@ -217,7 +219,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 414px;
   justify-content: center;
 }
 

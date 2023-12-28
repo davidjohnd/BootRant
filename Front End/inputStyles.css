@@ -205,7 +205,7 @@ header {
 .headingContents {
   margin-left: 2rem;
   margin-right: 2rem;
-  width: 100%;
+  width: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
